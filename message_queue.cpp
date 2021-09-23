@@ -3,3 +3,16 @@
 //
 
 #include "message_queue.h"
+
+
+MessageQueue::MessageQueue(bool quitAllowed) {
+
+}
+
+void MessageQueue::quit(bool safe) {
+
+}
+
+Message *MessageQueue::next() {
+    return nullptr;
+}

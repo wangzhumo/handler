@@ -6,8 +6,18 @@
 #define HANDLER_MESSAGE_QUEUE_H
 
 
-class MessageQueue {
+#include "message.h"
 
+class MessageQueue {
+public:
+    // 初始化自己，epoll
+    MessageQueue(bool quitAllowed);
+
+    ~MessageQueue() = default;
+
+    void quit(bool safe);
+
+    Message* next();
 };
 
 

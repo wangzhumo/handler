@@ -6,8 +6,12 @@
 #define HANDLER_HANDLER_H
 
 
+#include "message.h"
+
 class Handler {
 
+public:
+    void dispatchMessage(Message *pMessage);
 };
 
 
