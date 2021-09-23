@@ -6,7 +6,7 @@
 #define HANDLER_HANDLER_H
 
 
-#include "message.h"
+class Message;
 
 class Handler {
 

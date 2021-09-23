@@ -17,6 +17,7 @@ public:
     static Looper *sMainLooper;
     // lock
     static std::mutex sLooperSync;
+
 private:
     // 当前持有的MessageQueue
     MessageQueue *mQueue;
@@ -26,9 +27,9 @@ private:
     bool loopRun;
 
 public:
-    void prepare();
-    void prepareMainLooper();
-    void prepare(bool quitAllowed);
+    static void prepare();
+    static void prepareMainLooper();
+    static void prepare(bool quitAllowed);
 
     // 获取当前线程的自己
     static Looper* myLooper() {
@@ -43,7 +44,11 @@ public:
         mQueue->quit(true);
     }
 
-    static void loop();
+    bool isCurrentThread(){
+        return std::this_thread::get_id() == mThread;
+    }
+
+    void loop();
 
 private:
     Looper(bool quitAllowed);

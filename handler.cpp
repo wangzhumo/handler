@@ -3,3 +3,7 @@
 //
 
 #include "handler.h"
+
+void Handler::dispatchMessage(Message *pMessage) {
+
+}

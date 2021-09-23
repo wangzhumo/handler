@@ -4,8 +4,9 @@
 
 #include "message_queue.h"
 
-
 MessageQueue::MessageQueue(bool quitAllowed) {
+    mQuitAllowed = quitAllowed;
+    // 创建epoll
 
 }
 

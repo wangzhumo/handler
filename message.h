@@ -11,8 +11,6 @@
 
 
 class Message {
-
-
 public:
     Message();
 

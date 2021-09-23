@@ -17,7 +17,12 @@ public:
 
     void quit(bool safe);
 
-    Message* next();
+    Message *next();
+
+private:
+    bool mQuitAllowed;
+    bool mQuitting;
+    Message* mMessages;
 };
 
 
