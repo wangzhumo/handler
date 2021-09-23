@@ -20,9 +20,16 @@ public:
     Message *next();
 
 private:
+    void dispose();
+    void pollOnce(long millis);
+
+public:
+    static std::mutex sQueueSync;
+
+private:
     bool mQuitAllowed;
     bool mQuitting;
-    Message* mMessages;
+    Message* mMessages = nullptr;
 };
 
 
