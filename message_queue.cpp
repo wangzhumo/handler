@@ -61,9 +61,5 @@ void MessageQueue::dispose() {
 }
 
 void MessageQueue::pollOnce(long millis) {
-    std::time_t tt = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-    std::tm* ptm = std::localtime(&tt);
 
-    ptm->tm_sec++;
-    std::this_thread::sleep_until(std::chrono::system_clock::from_time_t(mktime(ptm)));
 }

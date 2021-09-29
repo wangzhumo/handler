@@ -8,6 +8,6 @@ include_directories(/usr/local/Cellar/libevent/2.1.12/include)
 # add extra lib directories
 link_directories(/usr/local/Cellar/libevent/2.1.12/lib)
 
-add_executable(handler main.cpp message.cpp message.h handler.cpp handler.h message_queue.cpp message_queue.h looper.cpp looper.h)
+add_executable(handler main.cpp message.cpp message.h handler.cpp handler.h message_queue.cpp message_queue.h looper.cpp looper.h event_thread.cpp event_thread.h)
 
 target_link_libraries(handler event)
